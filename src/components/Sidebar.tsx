@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Home, User, SquareTerminal, Rss, Mail } from "lucide-react";
+import { Home, User, TrendingUpDown, SquareTerminal, Rss, Mail } from "lucide-react";
 
 // Navigation links with icon, label and route
 const links = [
   { icon: Home, label: "Home", href: "/" },
   { icon: User, label: "À Propos", href: "/about" },
+  { icon: TrendingUpDown, label: "Experience", href: "/experience" },
   { icon: SquareTerminal, label: "Projets", href: "/work" },
   { icon: Rss, label: "Blog", href: "/blog" },
   { icon: Mail, label: "Contact", href: "/contact" },

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MapPin } from "lucide-react";
 
 // Animation variants for container and children elements
 const containerVariants = {
@@ -54,27 +55,41 @@ const LightResume = () => {
       </motion.h1>
 
       {/* Description paragraph with highlighted roles */}
-      <motion.p
-        className="text-lg leading-relaxed tracking-normal font-semibold mb-3 text-gray-400"
-        variants={itemVariants}
-      >
-        Je m'appelle Valentin et je suis{" "}
-        <span className="text-lime-600">
-          Administrateur Système & Réseaux
-        </span>{" "}
-        passionné par le{" "}
-        <span className="text-lime-600">développement</span>. Je code à mes
-        heures perdues depuis plusieurs années.
-      </motion.p>
+      <div className="flex flex-col text-gray-400">
+        <motion.p
+          className="text-lg leading-relaxed tracking-normal font-semibold py-1 text-gray-400"
+          variants={itemVariants}
+        >
+          Je m'appelle Valentin et je suis{" "}
+          <span className="text-lime-600">
+            Administrateur Système & Réseaux
+          </span>{" "}
+          passionné par le{" "}
+          <span className="text-lime-600">développement</span>.
+        </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed tracking-normal font-semibold py-1 text-gray-400"
+          variants={itemVariants}
+        >
+          Je code à mes heures perdues depuis plusieurs années.
+        </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed tracking-normal font-semibold py-1 text-gray-400"
+          variants={itemVariants}
+        >
+          Mon background me permet d’aborder les projets avec une vision complète
+          à la fois côté <span className="text-lime-600">Infra</span> &{" "}
+          <span className="text-lime-600">Dev</span>.
+        </motion.p>
+      </div>
 
       {/* Additional paragraph about hybrid skills */}
       <motion.p
-        className="text-lg leading-relaxed tracking-normal font-semibold text-gray-400"
+        className="text-lg leading-relaxed tracking-normal font-semibold py-8 text-gray-400"
         variants={itemVariants}
       >
-        Mon background me permet d’aborder les projets avec une vision complète
-        à la fois côté <span className="text-lime-600">Infra</span> &{" "}
-        <span className="text-lime-600">Dev</span>.
+        Basé à{" "}
+        <span className="text-lime-600">Grenoble</span> en <span className="text-lime-600">France</span>.
       </motion.p>
     </motion.div>
   );

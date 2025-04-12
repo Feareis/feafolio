@@ -34,7 +34,7 @@ const BentoHero = () => {
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-3 gap-3 auto-rows-[120px] text-gray-400">
+        <div className="grid grid-cols-3 gap-4 auto-rows-[120px] text-gray-400">
           {/* Profile picture */}
           <motion.a
             href="/about"
@@ -60,14 +60,14 @@ const BentoHero = () => {
 
           {/* CV download (external) */}
           <motion.a
-            href="/doc/resume.pdf"
+            href="/experience"
             target="_blank"
             rel="noopener noreferrer"
             variants={itemVariants}
           >
             <div className="flex flex-col gap-1 rounded-br-[35px] rounded-t-[35px] h-full justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 cursor-pointer group transition-all duration-500 hover:scale-102">
               <ScrollText size={32} />
-              <span className="text-base uppercase font-bold">Mon CV</span>
+              <span className="text-base uppercase font-bold">Mon Experience</span>
             </div>
           </motion.a>
 
@@ -85,11 +85,10 @@ const BentoHero = () => {
           <motion.a
             href="/work"
             variants={itemVariants}
-            className="row-span-2 rounded-tr-[45px] rounded-b-[45px] flex justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 font-semibold cursor-pointer transition-all duration-500 hover:scale-102"
+            className="row-span-2 rounded-tr-[45px] rounded-b-[45px] flex flex-col gap-1 justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 font-semibold cursor-pointer transition-all duration-500 hover:scale-102"
           >
-            <span className="text-base writing-vertical uppercase rotate-270">
-              Projets personnel
-            </span>
+            <IdCard size={32} />
+            <span className="text-lg font-bold uppercase">Projets</span>
           </motion.a>
 
           {/* LinkedIn external link */}
