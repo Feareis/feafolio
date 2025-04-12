@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Global cursor style applied to all elements */
+* {
+  cursor: url('/cursor.ico'), auto;
+}

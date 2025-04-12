@@ -1,9 +1,9 @@
-import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import profilePic from "../../../assets/profile_pic.jpg"
-import { IdCard, ScrollText, UserSearch, Linkedin, Github } from "lucide-react"
+import React from "react";
+import { motion } from "framer-motion";
+import profilePic from "../../../assets/profile_pic.jpg";
+import { IdCard, ScrollText, UserSearch, Linkedin, Github } from "lucide-react";
 
+// Container animation: applies stagger between children
 const containerVariants = {
   hidden: {},
   show: {
@@ -11,8 +11,9 @@ const containerVariants = {
       staggerChildren: 0.15,
     },
   },
-}
+};
 
+// Each item fades and slides in
 const itemVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
   show: {
@@ -21,8 +22,9 @@ const itemVariants = {
     y: 0,
     transition: { duration: 0.5, ease: "easeOut" },
   },
-}
+};
 
+// Bento-style hero grid with animated cards for profile, links, and socials
 const BentoHero = () => {
   return (
     <div className="flex w-1/2 justify-center">
@@ -33,7 +35,7 @@ const BentoHero = () => {
         animate="show"
       >
         <div className="grid grid-cols-3 gap-3 auto-rows-[120px] text-gray-400">
-          {/* Profile Pic */}
+          {/* Profile picture */}
           <motion.a
             href="/about"
             variants={itemVariants}
@@ -46,7 +48,7 @@ const BentoHero = () => {
             />
           </motion.a>
 
-          {/* Experience */}
+          {/* Contact link */}
           <motion.a
             href="/contact"
             variants={itemVariants}
@@ -56,20 +58,20 @@ const BentoHero = () => {
             <span className="text-base uppercase font-bold">Contact</span>
           </motion.a>
 
-          {/* CV */}
+          {/* CV download (external) */}
           <motion.a
             href="/doc/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             variants={itemVariants}
           >
-            <div className="flex flex-col gap-1 rounded-br-[35px] rounded-t-[35px] flex h-full justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 cursor-pointer group transition-all duration-500 hover:scale-102">
+            <div className="flex flex-col gap-1 rounded-br-[35px] rounded-t-[35px] h-full justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 cursor-pointer group transition-all duration-500 hover:scale-102">
               <ScrollText size={32} />
               <span className="text-base uppercase font-bold">Mon CV</span>
             </div>
           </motion.a>
 
-          {/* Read Me */}
+          {/* About / read more */}
           <motion.a
             href="/about"
             variants={itemVariants}
@@ -79,16 +81,18 @@ const BentoHero = () => {
             <span className="text-base uppercase">En savoir plus</span>
           </motion.a>
 
-          {/* Side Projects */}
+          {/* Side projects link */}
           <motion.a
             href="/work"
             variants={itemVariants}
             className="row-span-2 rounded-tr-[45px] rounded-b-[45px] flex justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 font-semibold cursor-pointer transition-all duration-500 hover:scale-102"
           >
-            <span className="text-base writing-vertical uppercase rotate-270">Projets personnel</span>
+            <span className="text-base writing-vertical uppercase rotate-270">
+              Projets personnel
+            </span>
           </motion.a>
 
-          {/* LinkedIn */}
+          {/* LinkedIn external link */}
           <motion.a
             href="https://www.linkedin.com/in/varei/"
             target="_blank"
@@ -99,7 +103,7 @@ const BentoHero = () => {
             <Linkedin size={36} />
           </motion.a>
 
-          {/* GitHub */}
+          {/* GitHub external link */}
           <motion.a
             href="https://github.com/feareis"
             target="_blank"
@@ -112,7 +116,7 @@ const BentoHero = () => {
         </div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default BentoHero
+export default BentoHero;

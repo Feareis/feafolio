@@ -1,21 +1,27 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
+// Animation variants for container and children elements
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.2, // Animate children with delay between them
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
+// LightResume component used on homepage hero section
 const LightResume = () => {
   return (
     <motion.div
@@ -24,16 +30,22 @@ const LightResume = () => {
       initial="hidden"
       animate="show"
     >
+      {/* Call-to-action badge linking to contact page */}
       <motion.div variants={itemVariants}>
         <Link
           to="/contact"
           className="inline-flex items-center gap-3 bg-white/10 px-3 py-2 rounded-lg cursor-pointer mb-5"
         >
+          {/* Animated green dot */}
           <span className="inline-block bg-lime-500/80 w-2 h-2 rounded-full shadow-2xl shadow-lime-500/80 animate-pulse" />
-          <span className="text-lime-500/80 font-bold text-xs uppercase">Open to work</span>
+          {/* Label text */}
+          <span className="text-lime-500/80 font-bold text-xs uppercase">
+            Open to work
+          </span>
         </Link>
       </motion.div>
 
+      {/* Main welcome heading */}
       <motion.h1
         className="text-4xl font-extrabold leading-snug text-gray-300/70 mb-8"
         variants={itemVariants}
@@ -41,24 +53,31 @@ const LightResume = () => {
         Bonjour & Bienvenue sur mon espace!
       </motion.h1>
 
+      {/* Description paragraph with highlighted roles */}
       <motion.p
         className="text-lg leading-relaxed tracking-normal font-semibold mb-3 text-gray-400"
         variants={itemVariants}
       >
         Je m'appelle Valentin et je suis{" "}
-        <span className="text-lime-600">Administrateur Système & Réseaux</span> passionné par le{" "}
-        <span className="text-lime-600">développement</span>. Je code à mes heures perdues depuis plusieurs années.
+        <span className="text-lime-600">
+          Administrateur Système & Réseaux
+        </span>{" "}
+        passionné par le{" "}
+        <span className="text-lime-600">développement</span>. Je code à mes
+        heures perdues depuis plusieurs années.
       </motion.p>
 
+      {/* Additional paragraph about hybrid skills */}
       <motion.p
         className="text-lg leading-relaxed tracking-normal font-semibold text-gray-400"
         variants={itemVariants}
       >
-        Mon background me permet d’aborder les projets avec une vision complète à la fois côté{" "}
-        <span className="text-lime-600">Infra</span> & <span className="text-lime-600">Dev</span>.
+        Mon background me permet d’aborder les projets avec une vision complète
+        à la fois côté <span className="text-lime-600">Infra</span> &{" "}
+        <span className="text-lime-600">Dev</span>.
       </motion.p>
     </motion.div>
-  )
-}
+  );
+};
 
-export default LightResume
+export default LightResume;
