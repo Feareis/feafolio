@@ -1,11 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
-const HighLeftSection = () => {
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+}
+
+const LightResume = () => {
   return (
-    <div className="w-full lg:w-1/2 px-4">
-      <div>
-        {/* Open to Work */}
+    <motion.div
+      className="w-full lg:w-1/2 px-4"
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <motion.div variants={itemVariants}>
         <Link
           to="/contact"
           className="inline-flex items-center gap-3 bg-white/10 px-3 py-2 rounded-lg cursor-pointer mb-5"
@@ -13,25 +32,33 @@ const HighLeftSection = () => {
           <span className="inline-block bg-lime-500/80 w-2 h-2 rounded-full shadow-2xl shadow-lime-500/80 animate-pulse" />
           <span className="text-lime-500/80 font-bold text-xs uppercase">Open to work</span>
         </Link>
+      </motion.div>
 
-        {/* Headline */}
-        <h1 className="text-4xl font-extrabold leading-snug text-gray-400/70 mb-8">
-          Bonjour & Bienvenue sur mon espace!
-        </h1>
+      <motion.h1
+        className="text-4xl font-extrabold leading-snug text-gray-300/70 mb-8"
+        variants={itemVariants}
+      >
+        Bonjour & Bienvenue sur mon espace!
+      </motion.h1>
 
-        {/* Description */}
-        <p className="text-lg leading-relaxed tracking-normal font-semibold mb-3 text-gray-400">
-          Je m'appelle Valentin et je suis{" "}
-          <span className="text-lime-600">Administrateur Système & Réseaux</span> passionné par le{" "}
-          <span className="text-lime-600">développement web</span>. Je code à mes heures perdues depuis plusieurs années.
-        </p>
-        <p className="text-lg leading-relaxed tracking-normal font-semibold text-gray-400">
-          Mon background me permet d’aborder les projets avec une vision complète à la fois côté{" "}
-          <span className="text-lime-600">Infra</span> & <span className="text-lime-600">Dev</span>.
-        </p>
-      </div>
-    </div>
-  );
+      <motion.p
+        className="text-lg leading-relaxed tracking-normal font-semibold mb-3 text-gray-400"
+        variants={itemVariants}
+      >
+        Je m'appelle Valentin et je suis{" "}
+        <span className="text-lime-600">Administrateur Système & Réseaux</span> passionné par le{" "}
+        <span className="text-lime-600">développement</span>. Je code à mes heures perdues depuis plusieurs années.
+      </motion.p>
+
+      <motion.p
+        className="text-lg leading-relaxed tracking-normal font-semibold text-gray-400"
+        variants={itemVariants}
+      >
+        Mon background me permet d’aborder les projets avec une vision complète à la fois côté{" "}
+        <span className="text-lime-600">Infra</span> & <span className="text-lime-600">Dev</span>.
+      </motion.p>
+    </motion.div>
+  )
 }
 
-export default HighLeftSection
+export default LightResume

@@ -1,11 +1,12 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import { Home, User, Briefcase, Mail } from "lucide-react"
+import { Home, User, Briefcase, Rss, Mail } from "lucide-react"
 
 const links = [
   { icon: Home, label: "Home", href: "/" },
   { icon: User, label: "À Propos", href: "/about" },
   { icon: Briefcase, label: "Projets", href: "/work" },
+  { icon: Rss, label: "Blog", href: "/blog" },
   { icon: Mail, label: "Contact", href: "/contact" },
 ]
 
@@ -38,8 +39,8 @@ const Sidebar = () => {
   )
 
   return (
-    <div className="fixed top-14 bottom-14 left-0 z-50 flex flex-col items-center justify-center gap-4">
-      <div className="flex flex-col p-4 gap-4 rounded-lg">
+    <div className="fixed top-14 bottom-14 left-0 z-50 flex flex-col items-center justify-center">
+      <div className="flex flex-col p-4 gap-5 rounded-lg">
         {links.map((link) => (
           <SidebarItem key={link.label} {...link} />
         ))}
