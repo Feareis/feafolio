@@ -1,23 +1,30 @@
 import React, { ReactNode } from "react";
 import Sidebar from "./Sidebar";
+import PageTitle from "./PageTitle";
 
 type LayoutProps = {
   children: ReactNode;
+  title?: string; // Optional title to display in the page
 };
 
-// Layout component wrapping all pages with a sidebar and consistent styling
-const Layout = ({ children }: LayoutProps) => {
+// Global layout with sidebar, optional title and main content area
+const Layout = ({ children, title }: LayoutProps) => {
   return (
     <div className="w-screen h-screen bg-[#121314] cursor text-white relative overflow-hidden">
-      {/* Sidebar component is always visible on the left */}
+      {/* Sidebar */}
       <Sidebar />
 
-      {/* Main content area centered both vertically and horizontally */}
+      {/* Page content */}
       <div className="flex justify-center items-center w-full h-full px-10 py-5">
         <div className="w-full h-full rounded-2xl bg-[#151517] mx-18 border border-gray-700/20 flex flex-col">
-          {/* Page content */}
-          <div className="flex-1 mx-18 my-8">
-            {children}
+
+          {/* Main content container */}
+          <div className="flex-grow flex flex-col items-center pt-10 gap-4 overflow-hidden">
+            {/* Optional page title */}
+            {title && <PageTitle title={title} />}
+
+            {/* Injected Page content */}
+            <div className="w-[80%]">{children}</div>
           </div>
 
           {/* Footer */}

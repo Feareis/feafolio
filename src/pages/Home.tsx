@@ -6,18 +6,18 @@ import Contact from "../components/pages/home/Contact";
 // Home page component assembling hero + contact section
 const Home = () => {
   return (
-    <section className="relative w-full flex flex-col items-center justify-between py-16 gap-28">
-      {/* Top section with intro text and bento visual */}
-      <div className="flex flex-row items-center justify-evenly gap-12 z-10 w-[85%]">
+    <div className="relative w-full max-w-full flex flex-col items-center justify-between py-32 gap-32">
+      {/* Top section */}
+      <div className="flex flex-row justify-between items-start w-full gap-12 z-10">
         <LightResume />
         <BentoHero />
       </div>
 
-      {/* Bottom section with contact block */}
-      <div className="flex flex-row items-center justify-evenly gap-12 z-10 w-[85%]">
+      {/* Bottom section */}
+      <div className="flex flex-row justify-center items-start w-full gap-12 z-10">
         <Contact />
       </div>
-    </section>
+    </div>
   );
 };
 
