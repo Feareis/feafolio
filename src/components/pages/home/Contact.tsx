@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <section
       id="contact-section"
-      className="relative flex flex-row w-full items-center justify-center gap-12 py-16"
+      className="relative flex flex-row w-full items-center justify-center gap-16 py-16"
     >
       {/* Left side: video animation wrapped in mailto link */}
       <div className="flex h-full flex-col w-[180px] justify-center items-center relative">
@@ -81,7 +81,7 @@ const Contact = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;-
             </p>
             <p className="text-lime-500 mt-1">
-              SMTP port is open — ready to receive your message
+              SMTP port is open — ready to receive your mail
             </p>
           </motion.div>
         )}

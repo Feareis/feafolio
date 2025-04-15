@@ -61,25 +61,17 @@ const LightResume = () => {
           variants={itemVariants}
         >
           Je m'appelle Valentin et je suis{" "}
-          <span className="text-lime-600">
+          <span className="text-lime-500/70">
             Administrateur Système & Réseaux
           </span>{" "}
           passionné par le{" "}
-          <span className="text-lime-600">développement</span>.
+          <span className="text-lime-500/70">développement</span>.
         </motion.p>
         <motion.p
           className="text-lg leading-relaxed tracking-normal font-semibold py-1 text-gray-400"
           variants={itemVariants}
         >
           Je code à mes heures perdues depuis plusieurs années.
-        </motion.p>
-        <motion.p
-          className="text-lg leading-relaxed tracking-normal font-semibold py-1 text-gray-400"
-          variants={itemVariants}
-        >
-          Mon background me permet d’aborder les projets avec une vision complète
-          à la fois côté <span className="text-lime-600">Infra</span> &{" "}
-          <span className="text-lime-600">Dev</span>.
         </motion.p>
       </div>
 
@@ -89,7 +81,7 @@ const LightResume = () => {
         variants={itemVariants}
       >
         Basé à{" "}
-        <span className="text-lime-600">Grenoble</span> en <span className="text-lime-600">France</span>.
+        <span className="text-lime-500/70">Grenoble</span> en <span className="text-lime-500/70">France</span>.
       </motion.p>
     </motion.div>
   );

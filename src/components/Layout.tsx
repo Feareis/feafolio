@@ -19,12 +19,12 @@ const Layout = ({ children, title }: LayoutProps) => {
         <div className="w-full h-full rounded-2xl bg-[#151517] mx-18 border border-gray-700/20 flex flex-col">
 
           {/* Main content container */}
-          <div className="flex-grow flex flex-col items-center pt-10 gap-4 overflow-hidden">
-            {/* Optional page title */}
-            {title && <PageTitle title={title} />}
-
-            {/* Injected Page content */}
-            <div className="w-[80%]">{children}</div>
+          <div className="flex-grow flex flex-col items-center gap-4 py-1 overflow-hidden">
+            {/* Children + TitlePage */}
+            <div className="w-[80%] flex-1 overflow-y-auto pr-2 hide-scrollbar space-y-8">
+              {title && <PageTitle title={title} />}
+              {children}
+            </div>
           </div>
 
           {/* Footer */}

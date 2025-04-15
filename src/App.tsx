@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 // List of routes, components, title
 const routes = [
   { path: "/", element: <Home /> },
-  { path: "/about", element: <About />, title: "À propos" },
+  { path: "/about", element: <About /> },
   { path: "/experience", element: <Experience />, title: "Expérience" },
   { path: "/work", element: <Work />, title: "Projets" },
   { path: "/blog", element: <Blog />, title: "Blog" },

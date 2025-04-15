@@ -6,9 +6,9 @@ import Contact from "../components/pages/home/Contact";
 // Home page component assembling hero + contact section
 const Home = () => {
   return (
-    <div className="relative w-full max-w-full flex flex-col items-center justify-between py-32 gap-32">
+    <div className="relative w-full flex flex-col items-center justify-between py-36 gap-32">
       {/* Top section */}
-      <div className="flex flex-row justify-between items-start w-full gap-12 z-10">
+      <div className="flex flex-row justify-between items-center w-full gap-12 z-10">
         <LightResume />
         <BentoHero />
       </div>
