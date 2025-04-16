@@ -6,8 +6,8 @@ import { Home, User, TrendingUpDown, SquareTerminal, Rss, Mail } from "lucide-re
 const links = [
   { icon: Home, label: "Home", href: "/" },
   { icon: User, label: "À Propos", href: "/about" },
-  { icon: TrendingUpDown, label: "Experience", href: "/experience" },
-  { icon: SquareTerminal, label: "Projets", href: "/work" },
+  { icon: TrendingUpDown, label: "Formation", href: "/education" },
+  { icon: SquareTerminal, label: "Projets", href: "/project" },
   { icon: Rss, label: "Blog", href: "/blog" },
   { icon: Mail, label: "Contact", href: "/contact" },
 ];

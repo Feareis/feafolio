@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Work from "./pages/Work";
+import Education from "./pages/Education";
+import Project from "./pages/Project";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
@@ -12,8 +12,8 @@ import Contact from "./pages/Contact";
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
-  { path: "/experience", element: <Experience />, title: "Expérience" },
-  { path: "/work", element: <Work />, title: "Projets" },
+  { path: "/education", element: <Education />, title: "Formation" },
+  { path: "/project", element: <Project />, title: "Projets" },
   { path: "/blog", element: <Blog />, title: "Blog" },
   { path: "/contact", element: <Contact />, title: "Contact" },
 ];

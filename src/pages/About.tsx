@@ -4,6 +4,7 @@ import About1 from "../assets/about_1.png";
 import About2 from "../assets/about_2.png";
 import About3 from "../assets/about_3.png";
 
+// Animation config for fade-in with upward motion and delay
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (delay: number = 0) => ({
@@ -15,8 +16,9 @@ const fadeInUp = {
       delay,
     },
   }),
-}
+};
 
+// About section with animated images and optional description
 const About = () => {
   return (
     <div className="relative w-full flex flex-col items-center justify-between py-16 gap-18">
@@ -26,8 +28,7 @@ const About = () => {
             className="font-extrabold text-gray-400/80 uppercase mb-2"
             variants={fadeInUp}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            animate="visible"
             custom={0}
           >
             Qui suis-je...
@@ -279,4 +280,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

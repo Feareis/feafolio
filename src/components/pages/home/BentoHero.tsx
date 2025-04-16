@@ -60,14 +60,12 @@ const BentoHero = () => {
 
           {/* CV download (external) */}
           <motion.a
-            href="/experience"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/education"
             variants={itemVariants}
           >
             <div className="flex flex-col gap-1 rounded-br-[35px] rounded-t-[35px] h-full justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 cursor-pointer group transition-all duration-500 hover:scale-102">
               <ScrollText size={32} />
-              <span className="text-base uppercase font-bold">Mon Experience</span>
+              <span className="text-base uppercase font-bold">Formations</span>
             </div>
           </motion.a>
 
@@ -83,7 +81,7 @@ const BentoHero = () => {
 
           {/* Side projects link */}
           <motion.a
-            href="/work"
+            href="/project"
             variants={itemVariants}
             className="row-span-2 rounded-tr-[45px] rounded-b-[45px] flex flex-col gap-1 justify-center items-center bg-[#1a1b1e] border border-gray-700/40 shadow-lg hover:text-lime-500/70 font-semibold cursor-pointer transition-all duration-500 hover:scale-102"
           >

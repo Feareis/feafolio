@@ -29,8 +29,8 @@ const Layout = ({ children, title }: LayoutProps) => {
 
           {/* Footer */}
           <footer className="flex justify-center items-center text-center border-t border-gray-700/20 py-4">
-            <p className="text-sm text-gray-500 font-bold transition-all duration-300 hover:scale-105">
-              Made with ❤️ by Feareis
+            <p className="text-sm text-gray-500 font-bold transition-all duration-300 hover:scale-102">
+              Made with ❤️ by Valentin Reisse
             </p>
           </footer>
         </div>
